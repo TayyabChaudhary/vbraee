@@ -38,6 +38,7 @@ const handleSubmit = async (e) => {
     if (result?.user?.token) {
         setUser(result); // Save user info (with token) in context
         CloseModal(); // Close the modal on success
+        window.location.reload();
       } else {
         console.error('Token not received:', result);
       }
