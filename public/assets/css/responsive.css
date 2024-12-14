@@ -1,0 +1,547 @@
+/* Responsiveness for all the designes */
+
+/* Large Laptop Screen */
+@media screen and (max-width: 1600px) {}
+
+
+
+/* Laptop Screen */
+@media screen and (max-width: 1200px) {
+    .vb_banner_cont {
+        padding: 30px;
+    }
+
+    .vb_banner_con {
+        height: 150px;
+    }
+
+    .cookie_con {
+        bottom: 20px;
+    }
+
+    .menu_sidebar_con {
+        padding: 15px;
+    }
+
+    .main_wrapper {
+        height: auto;
+    }
+
+    .main_house_con {
+        height: 100dvh;
+    }
+
+    .right_sidebar_con {
+        /* height: 100vh; */
+        position: absolute !important;
+        z-index: 1000;
+    }
+
+
+
+    .game_details_con {
+        min-height: auto;
+        padding: 10px;
+    }
+
+    .main_cont {
+        padding: 20px;
+    }
+
+    .cate_header {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+
+    .cart_item_con {
+        padding: 20px 20px;
+    }
+
+    .shop_total_con {
+        padding: 0px;
+    }
+
+    .acct_cont {
+        padding: 20px;
+    }
+
+    .acct_score_cont {
+        padding: 20px;
+    }
+
+}
+
+
+/* Tablet Screen */
+@media screen and (max-width: 850px) {
+    .acct_cont {
+        border: none;
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .cart_item_con {
+        padding: 20px 15px;
+    }
+
+    .details_img {
+        height: 330px;
+    }
+
+    .header_user {
+        min-height: auto;
+        font-size: 18px;
+    }
+
+    .header_user>.user {
+        font-size: 20px;
+    }
+
+    .header_cart {
+        min-height: auto;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 10px;
+    }
+
+    .header_cart>svg {
+        font-size: 20px;
+    }
+
+    .header_cart_num {
+        top: -3px;
+        right: -3px;
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+        line-height: auto;
+    }
+
+    .main_section {
+        padding: 15px;
+    }
+
+    .main_cont {
+        border: none;
+        padding: 0px;
+        background: none;
+    }
+
+    .cate_header {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .cate_filter_con {
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        height: calc(100% - 60px);
+        position: fixed;
+        padding: 15px 15px 0px;
+        background-color: #192232;
+    }
+
+    .cart_tab {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .register_con {
+        border-radius: 0px;
+    }
+
+    .vb_step_col {
+        padding: 30px 20px;
+    }
+
+    .vb_banner_cont {
+        padding: 30px 15px;
+    }
+
+    .vb_how_cont {
+        padding: 20px;
+    }
+
+    .vb_off_cont {
+        padding: 25px 15px;
+    }
+
+    .blog_detail_con {
+        padding: 20px 15px;
+    }
+
+    .shop_total_con {
+        position: static;
+    }
+
+    .shop_total_cont {
+        padding: 20px 15px;
+    }
+
+    .shop_details_cont {
+        padding: 20px 15px;
+    }
+
+    .acct_filter_cont {
+        left: 0;
+        bottom: 0;
+        width: 300px;
+        height: calc(100% - 60px);
+        position: fixed;
+        padding: 15px 15px;
+        background-color: #192232;
+    }
+
+    .offer_save_btn_con {
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        position: fixed;
+        padding: 20px;
+        border: 1px solid #273147;
+        background-color: #161D2E;
+        z-index: 1050;
+    }
+
+    .modal_cont {
+        border-radius: 0px;
+        padding: 20px 15px;
+    }
+
+    .dash_level_close {
+        top: 5px;
+        right: 10px;
+    }
+
+    .dash_level_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .acct_noti_cont:nth-child(odd) {
+        background-color: #1B2435;
+    }
+
+    .acct_noti_cont:nth-child(even) {
+        background-color: #1B2435;
+    }
+
+    .msg_dea_head_con {
+        padding: 20px;
+    }
+
+    .msg_chat_cont {
+        padding: 20px;
+    }
+
+    .msg_box_con {
+        padding: 20px;
+    }
+
+    .search_result_con {
+        top: 65px;
+        border-radius: 0px;
+        padding: 15px 15px;
+    }
+
+    .housing_con {
+        background-size: contain;
+        background-position-y: 60px;
+    }
+
+    .header_user_img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main_footer_con {
+        padding: 10px 0px;
+    }
+
+    .dash_level {
+        border-radius: 0px;
+        padding: 20px 15px;
+    }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 480px) {
+    .game_item {
+        flex: 1 1 50%;
+    }
+
+    .header_user_img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dash_cont_num {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .msg_box_con {
+        padding: 15px 15px;
+    }
+
+    .acct_chat_cont {
+        padding: 15px 15px;
+    }
+
+    .msg_chat_cont {
+        padding: 15px 15px;
+    }
+
+    .msg_dea_head_con {
+        padding: 15px 15px;
+    }
+
+    .msg_dea_text.blue {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cart_item_name.truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .msg_dea_cont {
+        border: none;
+        border-radius: 0px;
+        margin: 0px -15px;
+    }
+
+    .msg_main_con {
+        border: none;
+        border-radius: 0px;
+        padding-top: 0px;
+    }
+
+    .msg_main_con>.pad {
+        padding: 0px 0px;
+    }
+
+    .msg_cont_con {
+        padding: 5px 2px;
+    }
+
+    .pro_up_img_cont {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .pro_link_cont {
+        padding: 15px 15px;
+    }
+
+    .pro_link_icon {
+        position: absolute;
+    }
+
+    .pro_link_cont:nth-child(odd) {
+        background-color: #1B2435;
+    }
+
+    .pro_link_cont:nth-child(even) {
+        background-color: #1B2435;
+    }
+
+    .acct_off_num {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .acct_offer_cont {
+        padding: 15px 15px;
+    }
+
+    .acct_offer_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .acct_filter_cont {
+        width: 100%;
+    }
+
+    .acct_cont_con {
+        padding: 15px;
+    }
+
+    .acct_score_cont {
+        padding: 20px 15px;
+    }
+
+    .ga_text_big {
+        font-size: 16px;
+    }
+
+    .shop_tab_con {
+        padding: 10px 0px;
+    }
+
+    .shop_details_con {
+        border: none;
+        background: none;
+    }
+
+    .shop_details_cont {
+        margin: 0px -15px;
+        box-sizing: content-box;
+    }
+
+    .blog_detail_con {
+        border-radius: 0px;
+        margin: 0px -15px;
+    }
+
+    .blog_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .blog_img_bg {
+        height: 183px;
+    }
+
+    .vb_acct_cont {
+        padding: 20px 15px;
+    }
+
+    .vb_req {
+        border-radius: 0px;
+        padding: 20px 15px;
+    }
+
+    .vb_conta {
+        height: 328px;
+        padding: 20px 15px;
+    }
+
+    .vb_contact {
+        padding: 30px 15px;
+    }
+
+    .vb_contact_con {
+        border: none;
+        border-radius: 0px;
+        background-color: transparent;
+    }
+
+    .vb_how_cont {
+        padding: 20px 15px;
+    }
+
+    .vb_step {
+        background-size: 100% auto, 100% auto, 0px, cover;
+    }
+
+    .vb_title_sm {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .vb_title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .vb_step_col {
+        padding: 30px 15px;
+    }
+
+    .vb_con {
+        border: none;
+        border-radius: 0px;
+        margin: 0px 0px;
+        background-size: 100% auto, cover, 100% auto;
+        background-color: transparent;
+    }
+
+    .vb_banner_con {
+        height: 0px;
+    }
+
+    .register_cont {
+        padding: 40px 15px;
+    }
+
+    .cart_pay_item {
+        padding: 10px;
+    }
+
+    .cart_item_con {
+        border-radius: 0px;
+        margin: 0px -15px;
+        box-sizing: content-box;
+    }
+
+    .cart_sum_text>.icon {
+        font-size: 25px;
+    }
+
+    .cart_sum_tip {
+        padding: 30px 15px 10px;
+    }
+
+    .cart_item_img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .details_rev {
+        padding: 15px;
+    }
+
+    .details_tab_cont {
+        border-radius: 0px;
+        padding: 20px 15px;
+        /* margin: 0px -15px; */
+    }
+
+    .details_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cate_filter_con {
+        width: 100%;
+    }
+
+    .banner_item1_cont {
+        padding: 15px 20px 35px;
+    }
+
+    .banner_title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .banner_text {
+        line-height: 18px;
+    }
+
+
+    .game_title {
+        font-size: 12px;
+    }
+
+    .main_sub_title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .main_sub_cont {
+        padding: 20px;
+    }
+
+    .pagi_item {
+        width: 35px;
+        height: 35px;
+    }
+}

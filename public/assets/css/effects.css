@@ -1,0 +1,43 @@
+.game_item_cont:hover .game_item_wishlist {
+    display: flex;
+}
+
+.header_drop_cate:hover {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #273147;
+}
+
+.acct_table_drop_link:hover {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #273147;
+}
+
+.detail_img_star:hover {
+    color: #1095ED;
+}
+
+.menu_sidebar_help:hover {
+    border: 1px solid #1095ED;
+}
+
+.main_footer_tag:hover {
+    color: #ffffff;
+    background-color: #273147;
+}
+
+.menu_sidebar_link:hover {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu_sidebar_link:hover svg {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu_sidebar_link2:hover {
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,18 @@
+:root {
+    --primary-color: rgba(22, 29, 46, 1);
+    --light-primary: rgba(39, 49, 71, 1);
+    --secondary-color: #254fe2;
+    --dark-blue: #254fe2;
+    --light-grey: #a5aecc;
+    --green: #43e283;
+    --light: #fff;
+    --dark: #000000;
+    --border-grey: #273147;
+    --secondary-grey: #8f97b1;
+    --primary-border-radius: 10px;
+    --btn-blue: #1095ed;
+    --bg-black: #0d1021;
+    --bg-grey: #1b2435;
+    --bg-red: #e2435f;
+    --bg-secondary-black: #161d2e80;
+}
