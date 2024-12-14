@@ -1,21 +1,38 @@
 import { useState } from 'react'
 import { useSignupMutation } from '../../../api/authApi';
 import { Link } from 'react-router-dom';
+import usePasswordValidation from '../../../hooks/use-password-validation';
 
 export default function RegisterForm({ OpenModal, CloseModal, setUser }) {
     const [signup, { isLoading }] = useSignupMutation();
- const [formData, setFormData] = useState({
-  email: '',
-  password: '',
-  confirmPassword: ''
+    
+    const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    confirmPassword: ''
 });
+const [password, setPassword] = useState('');
+  const { validation, validatePassword } = usePasswordValidation();
 
 const handleChange = (e) => {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
+  const { name, value } = e.target;
+
+  if (name === 'password') {
+    setPassword(value);
+    validatePassword(value); // Validate the password as user types
+  }
+
+   setFormData({ ...formData, [e.target.name]: e.target.value });
 };
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+
+    // Optional: Add validation logic for confirmPassword
+    if (formData.password !== formData.confirmPassword) {
+      console.error('Passwords do not match.');
+      return;
+    }
   try {
     const result = await signup(formData).unwrap();
     if (result?.user?.token) {
@@ -58,8 +75,8 @@ const handleSubmit = async (e) => {
                   name="password"
                   className="auth_input"
                   placeholder="-"
-                  value={formData.password}
-            onChange={handleChange}
+                  value={password}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -74,6 +91,8 @@ const handleSubmit = async (e) => {
                       type="checkbox"
                       value=""
                       id="defaultCheck1"
+                      checked={validation.hasUppercase}
+                      readOnly
                     />
                     <label className="auth_check_text" htmlFor="defaultCheck1">
                       at least one uppercase character
@@ -85,6 +104,8 @@ const handleSubmit = async (e) => {
                       type="checkbox"
                       value=""
                       id="defaultCheck1"
+                      checked={validation.hasLowercase}
+                      readOnly
                     />
                     <label className="auth_check_text" htmlFor="defaultCheck1">
                       at least one lowercase character
@@ -96,6 +117,8 @@ const handleSubmit = async (e) => {
                       type="checkbox"
                       value=""
                       id="defaultCheck1"
+                      checked={validation.hasSpecialChar}
+                      readOnly
                     />
                     <label className="auth_check_text" htmlFor="defaultCheck1">
                       at least one special character
@@ -107,6 +130,8 @@ const handleSubmit = async (e) => {
                       type="checkbox"
                       value=""
                       id="defaultCheck1"
+                      checked={validation.hasNumber}
+                      readOnly
                     />
                     <label className="auth_check_text" htmlFor="defaultCheck1">
                       at least one number
@@ -118,6 +143,8 @@ const handleSubmit = async (e) => {
                       type="checkbox"
                       value=""
                       id="defaultCheck1"
+                      checked={validation.hasMinLength}
+                      readOnly
                     />
                     <label className="auth_check_text" htmlFor="defaultCheck1">
                       at least 8 character
@@ -129,6 +156,8 @@ const handleSubmit = async (e) => {
                       type="checkbox"
                       value=""
                       id="defaultCheck1"
+                      checked={validation.hasMaxLength}
+                      readOnly
                     />
                     <label className="auth_check_text" htmlFor="defaultCheck1">
                       maximum 38 character
@@ -149,7 +178,7 @@ const handleSubmit = async (e) => {
                   className="auth_input"
                   placeholder="-"
                   value={formData.confirmPassword}
-            onChange={handleChange}
+                  onChange={handleChange}
                 />
               </div>
             </div>

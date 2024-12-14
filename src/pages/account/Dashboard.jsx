@@ -8,6 +8,8 @@ import DashboardLevel from "../componets/modals/DashboardLevel";
 import { useState } from "react";
 import MainFooter from "../componets/MainFooter";
 import BuyerCustomCoupon from "../componets/modals/BuyerCustomCoupon";
+import { useGetCurrentUserQuery } from "../../api/authApi";
+import Avatar from "../../components/common/profile/avatar";
 
 export default function Dashboard() {
   const breadCrums = [
@@ -20,7 +22,7 @@ export default function Dashboard() {
   const { activeTab, ChangeTab } = useTabs(1);
   const [openLevel, setOpenLevel] = useState(false);
   const [isCustomCouponOpen, setIsCustomCouponOpen] = useState(false);
-
+  const { data: user } = useGetCurrentUserQuery();
 
   function OpenLevelModal() {
     setOpenLevel(true);
@@ -74,11 +76,15 @@ export default function Dashboard() {
                         alt=""
                         className="shop_banner_profile_check position-absolute"
                       />
-                      <img
+                      {user ? (
+                        <Avatar user={user} />
+                      ): (
+                        <img
                         src={"../assets/images/user.png"}
                         alt=""
                         className="shop_banner_profile_img"
                       />
+                      )}
                     </div>
                   </Link>
                   <div className="col">
