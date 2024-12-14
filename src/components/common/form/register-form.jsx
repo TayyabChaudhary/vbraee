@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useSignupMutation } from '../../../api/authApi';
 import { Link } from 'react-router-dom';
 import usePasswordValidation from '../../../hooks/use-password-validation';
-
+import { toast, Zoom } from "react-toastify";
 export default function RegisterForm({ OpenModal, CloseModal, setUser }) {
     const [signup, { isLoading }] = useSignupMutation();
     
@@ -30,15 +30,19 @@ const handleSubmit = async (e) => {
 
     // Optional: Add validation logic for confirmPassword
     if (formData.password !== formData.confirmPassword) {
-      console.error('Passwords do not match.');
+      toast.error("Password not match", { position: "top-right", hideProgressBar: true, transition: Zoom, style: "z-index: 100" });
       return;
     }
   try {
     const result = await signup(formData).unwrap();
     if (result?.user?.token) {
         setUser(result); // Save user info (with token) in context
+        
         CloseModal(); // Close the modal on success
-        window.location.reload();
+        toast.success("User Registered Successfully", { position: "top-right", hideProgressBar: true, transition: Zoom, style: "z-index: 100" });
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       } else {
         console.error('Token not received:', result);
       }

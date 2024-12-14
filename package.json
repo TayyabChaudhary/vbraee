@@ -17,6 +17,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.28.0",
     "react-timer-hook": "^3.0.8",
+    "react-toastify": "^10.0.6",
     "swiper": "^11.1.14"
   },
   "devDependencies": {

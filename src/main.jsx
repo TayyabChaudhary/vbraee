@@ -10,7 +10,8 @@ import React from "react";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
 import { UserProvider } from "./store/Usercontext";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -25,5 +26,6 @@ createRoot(document.getElementById("root")).render(
     </ModalProvider>
     </UserProvider>
     </Provider>
+    <ToastContainer />
   </React.StrictMode>
 );
